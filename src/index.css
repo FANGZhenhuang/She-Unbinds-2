@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Afacad:wght@400;600;700&display=swap');
+
+@theme {
+  --font-sans: "Afacad", ui-sans-serif, system-ui, sans-serif;
+  --font-nav: "ABeeZee", sans-serif;
+  
+  --color-brand-green: #1E4F33;
+  --color-brand-light: #f5f5f0;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-green bg-brand-light;
+  }
+  
+  /* Navbar specific font */
+  nav {
+    @apply font-nav;
+  }
+
+  /* Hero Large Text - SemiBold */
+  h1 {
+    @apply font-sans font-semibold;
+  }
+
+  /* Body Titles - Bold */
+  h2, h3 {
+    @apply font-sans font-bold;
+  }
+}
+
+.bg-gradient-page {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background-attachment: fixed;
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md rounded-3xl shadow-sm;
+}
