@@ -1,6 +1,7 @@
 import { useState, ReactNode } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import OurCause from './pages/OurCause';
@@ -75,6 +76,7 @@ export default function App() {
           <p>© {new Date().getFullYear()} She Unbinds. All rights reserved.</p>
         </footer>
       </div>
+      <Analytics />
     </div>
   );
 }
